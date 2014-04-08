@@ -1,0 +1,76 @@
+<template name="newInscription">
+    <div>
+        <h2>Nouvelle inscription</h2>
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label for="reference" class="col-sm-2 control-label">Référence</label>
+                <div class="col-sm-5">
+                    <div class="row">
+                        <div class="col-sm-4">
+                        <select class="form-control col-xs-2" id="reference-1" name="reference">
+                            {{#each books}}
+                                <option>{{title}}</option>
+                            {{/each}}  
+                        </select>
+                        </div>
+                        <div class="col-sm-8">
+                        <input type="text" class="form-control col-xs-3" id="reference-2" name="reference" value="{{reference}}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="city" class="col-sm-2 control-label">Cité</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" id="city" name="city" value="{{city}}">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="description" class="col-sm-2 control-label">Description</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" id="description" name="description" value="{{description}}">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="dimensions" class="col-sm-2 control-label">Dimensions (en cm)</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" id="dimensions" name="dimensions" value="{{dimensions}}">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="letterHeight" class="col-sm-2 control-label">Hauteur des lettres (en cm)</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" id="letterHeight" name="letterHeight" value="{{letterHeight}}">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="date" class="col-sm-2 control-label">Datation</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" id="date" name="date" value="{{date}}">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="transcription" class="col-sm-2 control-label">Transcription</label>
+                <div class="col-sm-5">
+                    <textarea class="form-control" rows="10" id="transcription" name="transcription" placeholder="Transcription et développement">{{#if transcription}}{{transcription}}{{/if}}</textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="analysis" class="col-sm-2 control-label">Analyse</label>
+                <div class="col-sm-5">
+                    <textarea class="form-control" rows="10" id="analysis" name="analysis" placeholder="Analyse">{{#if analysis}}{{analysis}}{{/if}}</textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="references" class="col-sm-2 control-label">Références extérieures</label>
+                <div class="col-sm-5">
+                    <textarea class="form-control" rows="2" id="references" name="references" placeholder="Références extérieures">{{#if references}}{{references}}{{/if}}</textarea>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="col-sm-offset-6 btn btn-primary">Créer</button>
+            </div>  
+        </form>
+    </div>
+</template>

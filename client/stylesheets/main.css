@@ -1,1 +1,16 @@
 body { padding-top: 70px; }
+
+li {
+    margin-bottom: 5px;
+}
+
+.thumbnail-element {
+    width:100%; 
+    height:180px;
+    text-align: center;
+    padding-top: 30%;
+}
+
+.button-add {
+    margin-right:15px;
+}
