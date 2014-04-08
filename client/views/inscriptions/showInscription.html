@@ -1,0 +1,55 @@
+<template name="showInscription">
+	<div>
+		<h2>{{reference}}</h2>
+		<form class="form-horizontal" role="form">
+			<div class="form-group">
+				<label class="col-sm-2 control-label">Cité</label>
+				<div class="col-sm-10">
+					<p class="form-control-static">{{city}}</p>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">Description</label>
+				<div class="col-sm-10">
+					<p class="form-control-static">{{{description}}}</p>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">Dimensions (en cm)</label>
+				<div class="col-sm-10">
+					<p class="form-control-static">{{dimensions}}</p>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">Hauteur des lettres (en cm)</label>
+				<div class="col-sm-10">
+					<p class="form-control-static">{{letterHeight}}</p>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">Datation</label>
+				<div class="col-sm-10">
+					<p class="form-control-static">{{date}}</p>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">Transcription</label>
+				<div class="col-sm-10">
+					<p class="form-control-static"><i>{{breaklines transcription}}</i></p>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">Analyse</label>
+				<div class="col-sm-10">
+					<p class="form-control-static">{{{analysis}}}</p>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">Références extérieures</label>
+				<div class="col-sm-10">
+					<p class="form-control-static">{{{references}}}</p>
+				</div>
+			</div>
+		</form>
+	</div>
+</template>

@@ -1,22 +1,11 @@
-<template name="newInscription">
+<template name="editInscription">
     <div>
-        <h2>Nouvelle inscription</h2>
+        <h2>Modifier une inscription</h2>
         <form class="form-horizontal">
             <div class="form-group">
                 <label for="reference" class="col-sm-2 control-label">Référence</label>
                 <div class="col-sm-5">
-                    <div class="row">
-                        <div class="col-sm-4">
-                        <select class="form-control col-xs-2" id="reference-1" name="reference">
-                            {{#each books}}
-                                <option>{{title}}</option>
-                            {{/each}}  
-                        </select>
-                        </div>
-                        <div class="col-sm-8">
-                        <input type="text" class="form-control col-xs-3" id="reference-2" name="reference" value="{{reference}}">
-                        </div>
-                    </div>
+                    <input type="text" class="form-control col-xs-3" id="reference" name="reference" value="{{reference}}" readonly>
                 </div>
             </div>
             <div class="form-group">
@@ -69,7 +58,7 @@
             </div>
 
             <div class="form-group">
-                <button type="submit" class="col-sm-offset-6 btn btn-primary">Créer</button>
+                <button type="submit" class="col-sm-offset-6 btn btn-primary">Accepter</button>
             </div>  
         </form>
     </div>

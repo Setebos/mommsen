@@ -11,10 +11,11 @@
                 </div>
             </div>
         </form>
+        <a href="{{pathFor 'newInscription'}}" class="btn btn-primary pull-right button-add"><span class="glyphicon glyphicon-plus"></span> Ajouter une inscription</a>
         <div>
             <ul class="list-unstyled">
                 {{#each inscriptions}}
-                    <li>{{reference}} <button>Voir</button> <button>Editer</button></li>
+                    <li>{{reference}} <a href="{{pathFor 'showInscription'}}" class="btn btn-info btn-sm">Voir</a>  <a href="{{pathFor 'editInscription'}}" class="btn btn-warning btn-sm">Modifier</a></li>
                 {{/each}}
             </ul>
         </div>

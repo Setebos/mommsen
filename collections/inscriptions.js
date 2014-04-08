@@ -7,5 +7,25 @@ Meteor.methods({
         var inscriptionId = Inscriptions.insert(newInscription);
 
         return inscriptionId;
+	},
+
+	updateInscription: function(inscription, id) {
+
+		console.log(inscription.transcription);
+
+		Inscriptions.update(id, {
+			$set: {
+				city: inscription.city,
+				description: inscription.description,
+				dimensions: inscription.dimensions,
+				letterHeight: inscription.letterHeight,
+				date: inscription.date,
+				transcription: inscription.transcription,
+				analysis: inscription.analysis,
+				references: inscription.references,
+			}
+		});
+
+		return id;
 	}
 })
