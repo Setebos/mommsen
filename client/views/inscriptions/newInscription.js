@@ -24,7 +24,6 @@ Template.newInscription.events({
         var bookTitle = $reference1.val();
 
         var book = Books.findOne({title: bookTitle});
-        console.log(book._id);
 
         var inscription = {
             reference: reference,

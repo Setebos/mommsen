@@ -10,9 +10,6 @@ Meteor.methods({
 	},
 
 	updateInscription: function(inscription, id) {
-
-		console.log(inscription.transcription);
-
 		Inscriptions.update(id, {
 			$set: {
 				city: inscription.city,
@@ -27,5 +24,15 @@ Meteor.methods({
 		});
 
 		return id;
+	},
+
+	searchInscription: function(reference) {
+		var inscription = Inscriptions.findOne({reference: reference});
+
+		if(inscription) {
+			return inscription._id;
+		} else {
+			throw new Meteor.Error(404, "Cette inscription n'est pas répertoriée dans l'application");
+		}
 	}
 })
